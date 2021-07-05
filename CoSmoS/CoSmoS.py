@@ -61,7 +61,7 @@ def S_k(r):
         return (hubble_dis / sqrt(Omega_k)) * sinh((sqrt(Omega_k) * r) / hubble_dis)
 
 
-# input parameters
+# PySimpleGUI Theme Option
 sg.change_look_and_feel('SandyBeach')
 
 
