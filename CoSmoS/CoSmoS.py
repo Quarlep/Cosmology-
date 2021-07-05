@@ -11,14 +11,14 @@ N = 10**5  # step-size
 c = 299792.458  # speed of light in km/s
 
 
-#### Calculating the age of the Universe ####
+#### Calculating the Age of the Universe ####
 
 
 def H(a):
     """
-    The hubble parameter in terms of scale factor a(t)
+    The Hubble Parameter in terms of the scale factor 
     """
-    return hubble_time / sqrt((Omega_b * (a)**(-1)) + (Omega_r * a**(-2)) + (Omega_dm * a**(-1)) + Omega_l*a**(-1-3*w_Λ) + (Omega_k))
+    return hubble_time / sqrt(Omega_b*(a)**(-1) + Omega_r*a**(-2) + Omega_dm*a**(-1) + Omega_l*a**(-1-3*w_Λ) + Omega_k)
 
 
 def Time(a, b):
