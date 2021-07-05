@@ -37,14 +37,14 @@ def Time(a, b):
 
 def H_z(z):
     """
-    the function of hubble parameter in terms of redshift (z)
+    The function of hubble parameter in terms of redshift (z)
     """
     return hubble_dis / (sqrt((Omega_b * (1+z)**(3)) + (Omega_r * (1+z)**(4)) + (Omega_dm * (1+z)**(3)) + (Omega_l * ((1+z)**(3+3*w_Λ))) + Omega_k * (1+z)**2))
 
 
 def distance(a, b):
     """
-    measuring distance for a given z value
+    Measuring distance for a given z value
     """
     h = (b - a) / N
     S1 = 4 * sum([H_z(a + (2 * i - 1)*h) for i in range(1, N//2 + 1)])
