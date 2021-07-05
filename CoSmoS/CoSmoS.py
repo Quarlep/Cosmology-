@@ -24,7 +24,7 @@ def H(a):
 def Time(a, b):
     """
     a is the time at the emission (t_e), b is the time at the observation (t_0). 
-    I used the Simpsons rule
+    I have used the Simpsons rule.
     """
     h = (b - a) / N
     S1 = 4 * sum([H(a + (2 * i - 1)*h) for i in range(1, N//2 + 1)])
