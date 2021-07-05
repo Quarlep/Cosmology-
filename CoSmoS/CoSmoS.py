@@ -1,5 +1,6 @@
 #### GUI based Cosmology Calculator ####
 
+
 import matplotlib.pyplot as plt
 import PySimpleGUI as sg
 from numpy import arange, sqrt, sinh, sin
@@ -9,13 +10,16 @@ from numpy import arange, sqrt, sinh, sin
 N = 10**5  # step-size
 c = 299792.458  # speed of light in km/s
 
+
 #### Calculating the age of the Universe ####
+
 
 def H(a):
     """
-    The function of hubble parameter in terms of scale factor a(t)
+    The hubble parameter in terms of scale factor a(t)
     """
     return hubble_time / sqrt((Omega_b * (a)**(-1)) + (Omega_r * a**(-2)) + (Omega_dm * a**(-1)) + Omega_l*a**(-1-3*w_Λ) + (Omega_k))
+
 
 def Time(a, b):
     """
@@ -27,13 +31,16 @@ def Time(a, b):
     S2 = 2 * sum([H(a + (2 * i * h)) for i in range(1, N//2)])
     return 1/3 * h * (H(a) + H(b) + S1 + S2)
 
+
 #### Calculating Distances ####
+
 
 def H_z(z):
     """
     the function of hubble parameter in terms of redshift (z)
     """
     return hubble_dis / (sqrt((Omega_b * (1+z)**(3)) + (Omega_r * (1+z)**(4)) + (Omega_dm * (1+z)**(3)) + (Omega_l * ((1+z)**(3+3*w_Λ))) + Omega_k * (1+z)**2))
+
 
 def distance(a, b):
     """
@@ -43,6 +50,7 @@ def distance(a, b):
     S1 = 4 * sum([H_z(a + (2 * i - 1)*h) for i in range(1, N//2 + 1)])
     S2 = 2 * sum([H_z(a + (2 * i * h)) for i in range(1, N//2)])
     return 1/3 * h * (H_z(a) + H_z(b) + S1 + S2)
+
 
 def S_k(r):
     if Omega_k < 0:
@@ -55,6 +63,7 @@ def S_k(r):
 
 # input parameters
 sg.change_look_and_feel('SandyBeach')
+
 
 layout_input = [
     [sg.Text('Cosmological Parameters', size=(
@@ -69,6 +78,7 @@ layout_input = [
     [sg.Image(r'GUI Images\wL.png'), sg.InputText(default_text='-1')],
     [sg.Submit(), sg.Cancel()]
 ]
+
 
 window_input = sg.Window('CoSmoS', layout_input)
 event, values = window_input.read()
