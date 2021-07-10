@@ -1,10 +1,9 @@
-################### GUI based Cosmology Calculator ###################
+################### CoSmoS (GUI Based Cosmology Evolution Calculator) ###################
 
 
 import matplotlib.pyplot as plt
-import PySimpleGUI as sg
 from numpy import arange, sqrt, sinh, sin
-from scipy import integrate
+import PySimpleGUI as sg
 from scipy.integrate import quad
 
 
@@ -31,7 +30,7 @@ def H_z(z):
     The Hubble Parameter in terms of the redshift (z).
     
     Args:
-        z: The redshift, z
+        z [float]: The redshift, z
     """
     E_z = sqrt(Omega_m*(1+z)**(3) + Omega_r*(1+z)**(4) + Omega_l*(1+z)**(3+3*w_Λ) + Omega_k*(1+z)**2)
     return hubble_dis / E_z
@@ -54,7 +53,7 @@ def S_k(r):
 
 def plotting():
     """
-    Plotting Distances
+    Plotting distances
     """
     dz = 10**(-5)  # differential redshift element
     zpoints = arange(0, 15, dz)
@@ -103,14 +102,15 @@ sg.change_look_and_feel('SandyBeach')
 
 
 layout_input = [
-                    [sg.Frame(layout=[
-                    [sg.Image(r'GUI Images\H0.png'), sg.InputText(default_text='67.36', font=('Tahoma', 12))],
-                    [sg.Image(r'GUI Images\Omegam.png'), sg.InputText(default_text='0.3369', font=('Tahoma', 12))],
-                    [sg.Image(r'GUI Images\OmegaL.png'), sg.InputText(default_text='0.6847', font=('Tahoma', 12))],
-                    [sg.Image(r'GUI Images\Omegar.png'), sg.InputText(default_text='0.00009', font=('Tahoma', 12))],
-                    [sg.Image(r'GUI Images\z.png'), sg.InputText(default_text='3', font=('Tahoma', 12))],
-                    [sg.Image(r'GUI Images\wL.png'), sg.InputText(default_text='-1', font=('Tahoma', 12))]], title='Cosmological Parameters', font=('Georgia', 14))],
-                    [sg.Submit(button_color='blue'), sg.Exit(button_color='red')],
+                [sg.Frame(layout=
+                    [
+                        [sg.Image(r'GUI Images\H0.png'), sg.InputText(default_text='67.36', font=('Tahoma', 12))],
+                        [sg.Image(r'GUI Images\Omegam.png'), sg.InputText(default_text='0.3369', font=('Tahoma', 12))],
+                        [sg.Image(r'GUI Images\OmegaL.png'), sg.InputText(default_text='0.6847', font=('Tahoma', 12))],
+                        [sg.Image(r'GUI Images\Omegar.png'), sg.InputText(default_text='0.00009', font=('Tahoma', 12))],
+                        [sg.Image(r'GUI Images\z.png'), sg.InputText(default_text='3', font=('Tahoma', 12))],
+                        [sg.Image(r'GUI Images\wL.png'), sg.InputText(default_text='-1', font=('Tahoma', 12))]],title='Cosmological Parameters', font=('Georgia', 14))],
+                [sg.Submit(button_color='blue'), sg.Exit(button_color='red')]
                 ]
 
 window_input = sg.Window('CoSmoS', layout_input)
@@ -125,8 +125,8 @@ while True:
         hubble_time = (((1 / H_0) * (3.086e+19)) / (3.154e+7)) / 10**9  # in Gyr
         a_emit = 1 / (1 + z)
         Omega_k = 1 - (Omega_m + Omega_l + Omega_r)
-        q_0 = Omega_r + Omega_m / 2 + - Omega_l
-        hubble_dis = c / H_0  # in Mpc
+        q_0 = Omega_r + Omega_m / 2 - Omega_l
+        hubble_dis = c / H_0   # in Mpc
         
         # calculated parameters
         age_of_universe = quad(H, 10**(-16), 1)[0]
@@ -140,13 +140,14 @@ while True:
         plotting()
         
         layout_output = [
-                            [sg.Frame(layout=[
-                                [sg.Text('Age of The Universe Today: {:.4f} Gyr'.format(age_of_universe), font=('Tahoma', 12))],
-                                [sg.Text('Age of The Universe at Redshift {}:  {:.4f} Gyr'.format(z, age_of_universe_at_z), font=('Tahoma', 12))],
-                                [sg.Text('Lookback Time: {:.4f} Gyr'.format(lookback_time), font=('Tahoma', 12))],
-                                [sg.Text('Comoving Distance at Redshift {}: {:.4f} Mpc'.format(z, comoving_distance), font=('Tahoma', 12))],
-                                [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(z, angular_distance), font=('Tahoma', 12))],
-                                [sg.Text('Luminosity Distance at Redshift {}: {:.4f} Mpc'.format(z, luminosity_distance), font=('Tahoma', 12))]], title='Results',  font = ('Georgia', 14))
+                            [sg.Frame(layout=
+                                [
+                                    [sg.Text('Age of The Universe Today: {:.4f} Gyr'.format(age_of_universe), font=('Tahoma', 12))],
+                                    [sg.Text('Age of The Universe at Redshift {}:  {:.4f} Gyr'.format(z, age_of_universe_at_z), font=('Tahoma', 12))],
+                                    [sg.Text('Lookback Time: {:.4f} Gyr'.format(lookback_time), font=('Tahoma', 12))],
+                                    [sg.Text('Comoving Distance at Redshift {}: {:.4f} Mpc'.format(z, comoving_distance), font=('Tahoma', 12))],
+                                    [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(z, angular_distance), font=('Tahoma', 12))],
+                                    [sg.Text('Luminosity Distance at Redshift {}: {:.4f} Mpc'.format(z, luminosity_distance), font=('Tahoma', 12))]], title='Results',  font = ('Georgia', 14))
                              ]
                         ]       
         window_output = sg.Window('CoSmoS', layout_output)
