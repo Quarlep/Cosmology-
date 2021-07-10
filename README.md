@@ -1,5 +1,5 @@
 # CoSmoS
-GUI based Cosmology Evolution Calculator Similar to the [ICosmos](http://www.icosmos.co.uk/index.html) 
+GUI based Cosmology Evolution Calculator (similar to the [ICosmos](http://www.icosmos.co.uk/index.html))
 
 
 #### 1. Run the `CoSmoS.py` file
