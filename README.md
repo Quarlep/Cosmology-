@@ -1,23 +1,26 @@
 # CoSmoS
-GUI based Cosmology Evolution Calculator (similar to the [ICosmos](http://www.icosmos.co.uk/index.html))
 
+GUI based Cosmology Evolution Calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html))
 
-#### 1. Run the `CoSmoS.py` file
-#### 2. Enter the Cosmological Parameters
+## Getting Started
+
+### 1. Run `CoSmoS.py`
+
+### 2. Enter the Cosmological Parameters
 
 ![mainpage](https://user-images.githubusercontent.com/45866787/125127680-8eb14380-e105-11eb-9a5e-2dcf458490a5.png)
 
-After you click submit, the program will produce three plots. These are
+After you click submit, the program will produce three plots;
 
-#### a) Comoving Distance vs Redshift
+#### a) Co-moving Distance vs Redshift
 
 ![Figure_1](https://user-images.githubusercontent.com/45866787/125128063-22830f80-e106-11eb-87d1-a16fa5256009.png)
 
-#### b) Angular Diameter Distance vs Redhift
+#### b) Angular Diameter Distance vs Redshift
 
 ![Figure_2](https://user-images.githubusercontent.com/45866787/125128092-2f076800-e106-11eb-9870-e0ba70ad1378.png)
 
-#### c) Luminostiy Distance vs Redshift
+#### c) Luminosity Distance vs Redshift
 
 ![Figure_3](https://user-images.githubusercontent.com/45866787/125128118-3af32a00-e106-11eb-89e7-76abd7982be1.png)
 

@@ -38,10 +38,10 @@ def H_z(z):
 
 def S_k(r):
     """
-    Transverse comoving distance, given in terms of comoving distance, r.
+    Transverse co-moving distance, given in terms of the co-moving distance, r.
 
     Args:
-        r [float]: The comoving distance
+        r [float]: The co-moving distance
     """
     if Omega_k < 0:
         return (hubble_dis / sqrt(abs(Omega_k))) * sin((sqrt(abs(Omega_k)) * r) / hubble_dis)
@@ -66,10 +66,10 @@ def plotting():
         distance_points.append(dis_point)
         angular_dis_points.append(S_k(dis_point) / (1 + z))
         luminosity_dist_points.append(S_k(dis_point) * (1 + z))
-    plt.plot(zpoints, distance_points, 'r', label='Comoving Distance')
-    plt.ylabel('Comoving Distance (Mpc)')
+    plt.plot(zpoints, distance_points, 'r', label='Co-moving Distance')
+    plt.ylabel('Co-moving Distance (Mpc)')
     plt.xlabel('z')
-    plt.title('Comoving Distance vs Redshift')
+    plt.title('Co-moving Distance vs Redshift')
     plt.grid(b=True, which='major', color='#666666', linestyle='-')
     plt.minorticks_on()
     plt.grid(b=True, which='minor', color='#999999', linestyle='-', alpha=0.2)
@@ -145,7 +145,7 @@ while True:
                                     [sg.Text('Age of The Universe Today: {:.4f} Gyr'.format(age_of_universe), font=('Tahoma', 12))],
                                     [sg.Text('Age of The Universe at Redshift {}:  {:.4f} Gyr'.format(z, age_of_universe_at_z), font=('Tahoma', 12))],
                                     [sg.Text('Lookback Time: {:.4f} Gyr'.format(lookback_time), font=('Tahoma', 12))],
-                                    [sg.Text('Comoving Distance at Redshift {}: {:.4f} Mpc'.format(z, comoving_distance), font=('Tahoma', 12))],
+                                    [sg.Text('Co-moving Distance at Redshift {}: {:.4f} Mpc'.format(z, comoving_distance), font=('Tahoma', 12))],
                                     [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(z, angular_distance), font=('Tahoma', 12))],
                                     [sg.Text('Luminosity Distance at Redshift {}: {:.4f} Mpc'.format(z, luminosity_distance), font=('Tahoma', 12))]], title='Results',  font = ('Georgia', 14))
                              ]
