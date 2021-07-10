@@ -51,7 +51,7 @@ def S_k(r):
         return (hubble_dis / sqrt(Omega_k)) * sinh((sqrt(Omega_k) * r) / hubble_dis)
 
 
-def plotting():
+def distancePlotter():
     """
     Plotting distances
     """
@@ -137,7 +137,7 @@ while True:
         angular_distance = S_k(comoving_distance) / (1 + z)
         
         # plotting distances
-        plotting()
+        distancePlotter()
         
         layout_output = [
                             [sg.Frame(layout=
