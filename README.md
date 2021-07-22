@@ -1,10 +1,10 @@
-# CoSmoS
+# CoSmoS - GUI
 
 GUI based Cosmology Evolution Calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html))
 
 ## Getting Started
 
-### 1. Run `CoSmoS.py`
+### 1. Run `cosmosgui.py`
 
 ### 2. Enter the Cosmological Parameters
 
