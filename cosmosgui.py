@@ -94,8 +94,8 @@ def distancePlotter():
     plt.grid(b=True, which='minor', color='#999999', linestyle='-', alpha=0.2)
     plt.show()
 
-
 #---------- GUI - CoSmoS  ----------#
+
 
 # PySimpleGUI Theme Option
 sg.change_look_and_feel('SandyBeach')
