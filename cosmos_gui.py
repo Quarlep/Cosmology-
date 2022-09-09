@@ -13,13 +13,12 @@ c = 299792.458   # speed of light [km/s]
 
 def H(a):
     """
-    The Hubble Parameter in terms of the scale factor (a(t)).
+    Hubble Parameter in terms of the scale factor (a(t)).
 
     Args:
         a [float]: The scale factor, a(t)
     """
-    E_a = sqrt(Omega_m*(a)**(-1) + Omega_r*a **
-               (-2) + Omega_l*a**(-1-3*w_Λ) + Omega_k)
+    E_a = sqrt(Omega_m*(a)**(-1) + Omega_r*a**(-2) + Omega_l*a**(-1-3*w_Λ) + Omega_k)
     return hubble_time / E_a
 
 
@@ -30,8 +29,7 @@ def H_z(z):
     Args:
         z [float]: The redshift, z
     """
-    E_z = sqrt(Omega_m*(1+z)**(3) + Omega_r*(1+z)**(4) +
-               Omega_l*(1+z)**(3+3*w_Λ) + Omega_k*(1+z)**2)
+    E_z = sqrt(Omega_m*(1+z)**(3) + Omega_r*(1+z)**(4) + Omega_l*(1+z)**(3+3*w_Λ) + Omega_k*(1+z)**2)
     return hubble_dis / E_z
 
 

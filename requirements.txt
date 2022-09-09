@@ -1,6 +1,5 @@
-Requirements
-
-1. matplotlib
-2. PySimpleGUI
-3. numpy
-4. scipy
+# Required packages
+matplotlib
+PySimpleGUI
+numpy
+scipy
