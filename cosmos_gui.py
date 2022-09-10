@@ -144,7 +144,7 @@ layout_input = [
      sg.Exit(button_color='red')]
 ]
 
-window_input = sg.Window('Cosmos-GUI', layout_input)
+window_input = sg.Window('Cosmos', layout_input)
 event, values = window_input.read()
 while True:
     if event == sg.WIN_CLOSED or event == 'Exit':
@@ -186,7 +186,7 @@ while True:
                     font=('Tahoma', 12))]], title='Results',  font=('Georgia', 14))
              ]
         ]
-        window_output = sg.Window('Cosmos-GUI', layout_output)
+        window_output = sg.Window('Cosmos', layout_output)
         event, values = window_output.read()
         if event == sg.WIN_CLOSED:
             window_output.close()
