@@ -1,9 +1,11 @@
 #---------- Cosmos GUI ----------#
 
+import os.path
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tck
+import numpy as np
 import PySimpleGUI as sg
-from numpy import arange, sin, sinh, sqrt
 from scipy.integrate import quad
 
 N = 10**6   # step size
@@ -12,7 +14,6 @@ c = 299792.458   # speed of light [km/s]
 
 #---------- Important Cosmological Functions ----------#
 
-
 def H(a):
     """
     Hubble Parameter in terms of the scale factor
@@ -20,7 +21,7 @@ def H(a):
     Args:
         a [float]: The scale factor, a(t)
     """
-    E_a = sqrt(Omega_m*(a)**(-1) + Omega_r*a**(-2) + Omega_l*a**(-1-3*w_Λ) + Omega_k)
+    E_a = np.sqrt(Omega_m*(a)**(-1) + Omega_r*a**(-2) + Omega_l*a**(-1-3*w_l) + Omega_k)
     return hubble_time / E_a
 
 
@@ -31,7 +32,7 @@ def H_z(z):
     Args:
         z [float]: The redshift, z
     """
-    E_z = sqrt(Omega_m*(1+z)**(3) + Omega_r*(1+z)**(4) + Omega_l*(1+z)**(3+3*w_Λ) + Omega_k*(1+z)**2)
+    E_z = np.sqrt(Omega_m*(1+z)**(3) + Omega_r*(1+z)**(4) + Omega_l*(1+z)**(3+3*w_l) + Omega_k*(1+z)**2)
     return hubble_dis / E_z
 
 
@@ -43,11 +44,11 @@ def S_k(r):
         r [float]: The comoving distance
     """
     if Omega_k < 0:
-        return (hubble_dis / sqrt(abs(Omega_k))) * sin((sqrt(abs(Omega_k)) * r) / hubble_dis)
+        return (hubble_dis / np.sqrt(abs(Omega_k))) * np.sin((np.sqrt(abs(Omega_k)) * r) / hubble_dis)
     elif Omega_k == 0:
         return r
     elif Omega_k > 0:
-        return (hubble_dis / sqrt(Omega_k)) * sinh((sqrt(Omega_k) * r) / hubble_dis)
+        return (hubble_dis / np.sqrt(Omega_k)) * np.sinh((np.sqrt(Omega_k) * r) / hubble_dis)
 
 
 def distancePlotter():
@@ -55,7 +56,7 @@ def distancePlotter():
     Plotting distances
     """
     dz = 10**(-5)  # differential redshift element
-    z_values = arange(0, 14, dz)
+    z_values = np.arange(0, 14, dz)
     comoving_dist_points = []
     angular_dist_points = []
     luminosity_dist_points = []
@@ -118,26 +119,24 @@ def distancePlotter():
     ax2.tick_params(which='minor', width=0.6, size=4, direction='in')
     plt.show()
 
-
 #---------- GUI ----------#
 
 # PySimpleGUI Theme Option
 sg.change_look_and_feel('SandyBeach')
 
-
 layout_input = [
     [sg.Frame(layout=[
-        [sg.Image('gui_images/h0.png'),
+        [sg.Image(os.path.normpath('gui_images/h0.png')),
          sg.InputText(default_text='67.36', font=('Tahoma', 12))],
-        [sg.Image(r'gui_images/omega_matter.png'),
+        [sg.Image(os.path.normpath('gui_images/omega_matter.png')),
          sg.InputText(default_text='0.3369', font=('Tahoma', 12))],
-        [sg.Image(r'gui_images/omega_lambda.png'),
+        [sg.Image(os.path.normpath('gui_images/omega_lambda.png')),
          sg.InputText(default_text='0.6847', font=('Tahoma', 12))],
-        [sg.Image(r'gui_images/omega_rad.png'),
+        [sg.Image(os.path.normpath('gui_images/omega_radiation.png')),
          sg.InputText(default_text='0.00009', font=('Tahoma', 12))],
-        [sg.Image(r'gui_images/z.png'),
+        [sg.Image(os.path.normpath('gui_images/z.png')),
          sg.InputText(default_text='3', font=('Tahoma', 12))],
-        [sg.Image(r'gui_images/w_lambda.png'),
+        [sg.Image(os.path.normpath('gui_images/w_lambda.png')),
          sg.InputText(default_text='-1', font=('Tahoma', 12))]],
         title='Cosmological Parameters', font=('Georgia', 14))],
     [sg.Submit(button_color='blue'),
@@ -150,13 +149,13 @@ while True:
     if event == sg.WIN_CLOSED or event == 'Exit':
         break
     if event == 'Submit':
-        H_0, Omega_m, Omega_l, Omega_r, z, w_Λ = [float(values[i]) for i in range(1, 13, 2)]
+        H_0, Omega_m, Omega_l, Omega_r, z, w_l = [float(values[i]) for i in range(1, 13, 2)]
 
         # derived parameters
         hubble_time = (((1 / H_0) * (3.086e+19)) / (3.154e+7)) / 10**9  # in Gyr
         a_emit = 1 / (1 + z)
         Omega_k = 1 - (Omega_m + Omega_l + Omega_r)
-        q_0 = Omega_r + Omega_m / 2 - Omega_l
+        q_0 = Omega_r + (Omega_m / 2) - Omega_l
         hubble_dis = c / H_0   # in Mpc
 
         # calculated parameters
