@@ -12,7 +12,7 @@ Required packages are given in the `requirements.txt` and they can be installed 
 
 ## Getting Started
 
-### 1. Run Cosmos-GUI via
+### 1. Run Cosmos-GUI
 
     python3 cosmos_gui.py
 
