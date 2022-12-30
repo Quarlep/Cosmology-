@@ -2,7 +2,7 @@
 
 GUI based cosmology evolution calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html))
 
-It's tested for GNU/Linux but it should also work in Windows and Mac (if you encounter with a problem, feel free to create an issue)
+It's tested for GNU/Linux but it should also work in Windows and Mac (if you encounter with a problem, feel free to create an issue).
 
 ## Installation
 
