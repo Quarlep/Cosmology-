@@ -126,17 +126,17 @@ sg.change_look_and_feel('SandyBeach')
 
 layout_input = [
     [sg.Frame(layout=[
-        [sg.Image(os.path.normpath('gui_images/h0.png')),
+        [sg.Image(os.path.normpath('res/h0.png')),
          sg.InputText(default_text='67.36', font=('Tahoma', 12))],
-        [sg.Image(os.path.normpath('gui_images/omega_matter.png')),
+        [sg.Image(os.path.normpath('res/omega_matter.png')),
          sg.InputText(default_text='0.3369', font=('Tahoma', 12))],
-        [sg.Image(os.path.normpath('gui_images/omega_lambda.png')),
+        [sg.Image(os.path.normpath('res/omega_lambda.png')),
          sg.InputText(default_text='0.6847', font=('Tahoma', 12))],
-        [sg.Image(os.path.normpath('gui_images/omega_radiation.png')),
+        [sg.Image(os.path.normpath('res/omega_radiation.png')),
          sg.InputText(default_text='0.00009', font=('Tahoma', 12))],
-        [sg.Image(os.path.normpath('gui_images/z.png')),
+        [sg.Image(os.path.normpath('res/z.png')),
          sg.InputText(default_text='3', font=('Tahoma', 12))],
-        [sg.Image(os.path.normpath('gui_images/w_lambda.png')),
+        [sg.Image(os.path.normpath('res/w_lambda.png')),
          sg.InputText(default_text='-1', font=('Tahoma', 12))]],
         title='Cosmological Parameters', font=('Georgia', 14))],
     [sg.Submit(button_color='blue'),
