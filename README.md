@@ -1,8 +1,8 @@
-# Cosmos-GUI
+# Cosmic
 
 GUI based cosmology evolution calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html))
 
-> It's tested for GNU/Linux. However, it should also work in Windows and Mac OS. If you ever encounter with a problem, feel free to create an issue.
+> It's tested for GNU/Linux, however it should also work in Windows and Mac OS. If you ever encounter with a problem, feel free to create an issue.
 
 ## Installation
 
@@ -10,13 +10,13 @@ Required packages are given in the `requirements.txt` and they can be installed 
 
     python3 -m pip install -r requirements.txt
 
-## Getting Started
+## User Guide
 
-1. Run Cosmos-GUI
+You can run *Cosmic* via
 
-        python3 cosmos_gui.py
+    python3 cosmic.py
 
-2. Enter the Cosmological Parameters
+Later on you'll see a page in this form, where you can enter the cosmological parameters
 
 ![main_page](https://user-images.githubusercontent.com/45866787/189471183-167463a0-c1b2-4a4f-bc87-da400f8399e0.png)
 

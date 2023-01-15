@@ -1,4 +1,3 @@
-# Required packages
 matplotlib
 pysimplegui
 numpy

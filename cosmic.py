@@ -1,5 +1,4 @@
-#---------- Cosmos GUI ----------#
-
+# ========== Cosmic ==========
 import os.path
 
 import matplotlib.pyplot as plt
@@ -8,11 +7,11 @@ import numpy as np
 import PySimpleGUI as sg
 from scipy.integrate import quad
 
+
 N = 10**6   # step size
 c = 299792.458   # speed of light [km/s]
 
-
-#---------- Important Cosmological Functions ----------#
+# ==========  Important Cosmological Functions ==========
 
 def H(a):
     """
@@ -119,7 +118,8 @@ def distancePlotter():
     ax2.tick_params(which='minor', width=0.6, size=4, direction='in')
     plt.show()
 
-#---------- GUI ----------#
+
+# ========== GUI ==========
 
 # PySimpleGUI Theme Option
 sg.change_look_and_feel('SandyBeach')
@@ -143,7 +143,7 @@ layout_input = [
      sg.Exit(button_color='red')]
 ]
 
-window_input = sg.Window('Cosmos', layout_input)
+window_input = sg.Window('Cosmic', layout_input)
 event, values = window_input.read()
 while True:
     if event == sg.WIN_CLOSED or event == 'Exit':
@@ -185,7 +185,7 @@ while True:
                     font=('Tahoma', 12))]], title='Results',  font=('Georgia', 14))
              ]
         ]
-        window_output = sg.Window('Cosmos', layout_output)
+        window_output = sg.Window('Cosmic', layout_output)
         event, values = window_output.read()
         if event == sg.WIN_CLOSED:
             window_output.close()
