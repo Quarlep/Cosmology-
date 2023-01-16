@@ -16,7 +16,7 @@ You can run *Cosmic* via
 
     python3 cosmic.py
 
-Later on you'll see a page in this form
+Later on you'll see a page in this form;
 
 ![main_page](https://user-images.githubusercontent.com/45866787/212608475-a6ee691c-c644-434e-b7e6-272e3b710b0f.png)
 
