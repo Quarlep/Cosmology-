@@ -171,16 +171,11 @@ while True:
 
         layout_output = [
             [sg.Frame(layout=[
-                [sg.Text('Age of The Universe Today: {:.4f} Gyr'.format(
-                    age_of_universe), font=('Tahoma', 12))],
-                [sg.Text('Age of The Universe at Redshift {}:  {:.4f} Gyr'.format(
-                    z, age_of_universe_at_z), font=('Tahoma', 12))],
-                [sg.Text('Lookback Time: {:.4f} Gyr'.format(
-                    lookback_time), font=('Tahoma', 12))],
-                [sg.Text('Comoving Distance at Redshift {}: {:.4f} Mpc'.format(
-                    z, comoving_distance), font=('Tahoma', 12))],
-                [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(
-                    z, angular_distance), font=('Tahoma', 12))],
+                [sg.Text('Age of The Universe Today: {:.4f} Gyr'.format(age_of_universe), font=('Tahoma', 12))],
+                [sg.Text('Age of The Universe at Redshift {}:  {:.4f} Gyr'.format(z, age_of_universe_at_z), font=('Tahoma', 12))],
+                [sg.Text('Lookback Time: {:.4f} Gyr'.format(lookback_time), font=('Tahoma', 12))],
+                [sg.Text('Comoving Distance at Redshift {}: {:.4f} Mpc'.format(z, comoving_distance), font=('Tahoma', 12))],
+                [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(z, angular_distance), font=('Tahoma', 12))],
                 [sg.Text('Luminosity Distance at Redshift {}: {:.4f} Mpc'.format(z, luminosity_distance),
                     font=('Tahoma', 12))]], title='Results',  font=('Georgia', 14))
              ]
