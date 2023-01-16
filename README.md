@@ -18,22 +18,22 @@ You can run *Cosmic* via
 
 Later on you'll see a page in this form, where you can enter the cosmological parameters
 
-![main_page](https://user-images.githubusercontent.com/45866787/189471183-167463a0-c1b2-4a4f-bc87-da400f8399e0.png)
+![main_page](https://user-images.githubusercontent.com/45866787/212608475-a6ee691c-c644-434e-b7e6-272e3b710b0f.png)
 
 After you click submit, the program will produce three plots:
 
 ### Comoving Distance vs Redshift
 
-![comoving_distance](https://user-images.githubusercontent.com/45866787/189471185-7432d037-3c1e-47bc-a4e0-c0c470cf538b.png)
+![com_vs_z](https://user-images.githubusercontent.com/45866787/212608534-0d3d0b59-3241-4593-bbe4-40eee29ab09f.png)
 
 ### Angular Diameter Distance vs Redshift
 
-![angular_diameter_distance](https://user-images.githubusercontent.com/45866787/189471190-2db78722-2119-47e7-ad2b-c08789d04d23.png)
+![ad_vs_z](https://user-images.githubusercontent.com/45866787/212608544-3d817bd1-cdfe-4b9e-8459-7b94130a8927.png)
 
 ### Luminosity Distance vs Redshift
 
-![luminosity_distance](https://user-images.githubusercontent.com/45866787/189471196-166f8379-a91a-4dfb-b5ac-88a0d8a1ad14.png)
+![ld_vs_z](https://user-images.githubusercontent.com/45866787/212608572-c23eda8c-8f6b-449d-9eb6-209115054d64.png)
 
 and finally, you'll see a page that prints the results
 
-![results](https://user-images.githubusercontent.com/45866787/189471198-26bed840-cbd4-41b1-81d7-845a849f10c0.png)
+![results](https://user-images.githubusercontent.com/45866787/212608596-1839a77d-57c3-42ce-b561-0fdfdc4dd2c3.png)
