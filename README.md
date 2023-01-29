@@ -12,11 +12,11 @@ Required packages are given in the `requirements.txt` and they can be installed 
 
 ## User Guide
 
-You can run Cosmic via
+You can run Cosmic by simply typing
 
     python3 cosmic.py
 
-After you start the program, you'll see a page in this form:
+in the terminal. After you start the program, you'll see a page in this form:
 
 ![main_page](https://user-images.githubusercontent.com/45866787/212608475-a6ee691c-c644-434e-b7e6-272e3b710b0f.png)
 
