@@ -16,7 +16,7 @@ Required packages are given in the `requirements.txt` and they can be installed 
 
     python3 -m pip install -r requirements.txt
 
-Additionally, `tkinter` support is required to run the Cosmic, and it can be installed by running;
+Additionally, `tkinter` support is required to run Cosmic, and it can be installed by running
 
 in Fedora
 
