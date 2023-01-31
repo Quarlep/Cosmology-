@@ -6,7 +6,7 @@ GUI based cosmology evolution calculator (similar to [ICosmos](http://www.icosmo
 
 ## Installation
 
-You can easily install Cosmic via
+You can easily install Cosmic by clonning the repository
 
     git clone https://github.com/seVenVo1d/cosmic.git
 
@@ -16,7 +16,7 @@ Required packages are given in the `requirements.txt` and they can be installed 
 
     python3 -m pip install -r requirements.txt
 
-Additionally, you will need `tkinter` to run the program properly. To install `tkinter` run:
+Additionally, `tkinter` support is required to run the Cosmic. `tkinter` can be installed by running;
 
 in Fedora
 
