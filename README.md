@@ -2,7 +2,7 @@
 
 GUI-based cosmology evolution calculator (similar to [Ned Wright's](https://astro.ucla.edu/~wright/CosmoCalc.html) cosmology calculator).
 
-> It's tested for GNU/Linux. However, it should also work in macOS. If you ever encounter a with a problem, feel free to create an issue.
+> It's tested for GNU/Linux. However, it should also work in macOS. If you ever encounter with a problem, feel free to create an issue.
 
 ## Installation
 
@@ -34,7 +34,7 @@ To start the program, run
 
     python3 cosmic.py
 
-in the terminal. The first page will look like
+in the terminal. The first page will look like this
 
 ![main_page](https://user-images.githubusercontent.com/45866787/212608475-a6ee691c-c644-434e-b7e6-272e3b710b0f.png)
 
