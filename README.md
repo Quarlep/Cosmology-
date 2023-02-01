@@ -1,6 +1,6 @@
 # Cosmic
 
-GUI-based cosmology evolution calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html)).
+GUI-based cosmology evolution calculator (similar to [Ned Wright's](https://astro.ucla.edu/~wright/CosmoCalc.html)).
 
 > It's tested for GNU/Linux. However, it should also work in macOS. If you ever encounter a problem, feel free to create an issue.
 
