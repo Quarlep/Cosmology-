@@ -6,9 +6,11 @@ GUI-based cosmology evolution calculator (similar to [Ned Wright's](https://astr
 
 ## Installation
 
-You can easily install Cosmic by cloning the repository
+You can install Cosmic by either cloning the repository
 
     git clone https://github.com/seVenVo1d/cosmic.git
+
+or downloading as ZIP.
 
 ## Requirements
 
@@ -28,11 +30,11 @@ in Ubuntu
 
 ## User Guide
 
-You can run Cosmic by simply typing
+To start the program, run
 
     python3 cosmic.py
 
-in the terminal. After you start the program, you'll see a page in this form:
+in the terminal. The first page will look like
 
 ![main_page](https://user-images.githubusercontent.com/45866787/212608475-a6ee691c-c644-434e-b7e6-272e3b710b0f.png)
 
