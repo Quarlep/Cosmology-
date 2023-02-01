@@ -1,8 +1,8 @@
 # Cosmic
 
-GUI based cosmology evolution calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html)).
+GUI-based cosmology evolution calculator (similar to [ICosmos](http://www.icosmos.co.uk/index.html)).
 
-> It's tested for GNU/Linux, however it should also work in macOS. If you ever encounter with a problem, feel free to create an issue.
+> It's tested for GNU/Linux. However, it should also work in macOS. If you ever encounter a problem, feel free to create an issue.
 
 ## Installation
 
@@ -12,7 +12,7 @@ You can easily install Cosmic by cloning the repository
 
 ## Requirements
 
-Required packages are given in the `requirements.txt` and they can be installed via
+Required packages are given in the `requirements.txt`, and they can be installed via
 
     python3 -m pip install -r requirements.txt
 

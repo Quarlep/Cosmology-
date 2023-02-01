@@ -5,13 +5,14 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as tck
 import numpy as np
 import PySimpleGUI as sg
+
 from scipy.integrate import quad
 
 
-N = 10**6   # step size
-c = 299792.458   # speed of light [km/s]
+N = 10**6       # step size
+c = 299792.458  # speed of light [km/s]
 
-# ==========  Important Cosmological Functions ==========
+# ========== Cosmological Functions ==========
 
 def H(a):
     """
@@ -178,7 +179,7 @@ while True:
                 [sg.Text('Angular Diameter Distance at Redshift {}: {:.4f} Mpc'.format(z, angular_distance), font=('Tahoma', 12))],
                 [sg.Text('Luminosity Distance at Redshift {}: {:.4f} Mpc'.format(z, luminosity_distance),
                     font=('Tahoma', 12))]], title='Results',  font=('Georgia', 14))
-             ]
+            ]
         ]
         window_output = sg.Window('Cosmic', layout_output)
         event, values = window_output.read()
