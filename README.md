@@ -8,7 +8,7 @@ GUI-based cosmology evolution calculator (similar to [Ned Wright's](https://astr
 
 You can install Cosmic by either cloning the repository
 
-    git clone https://github.com/seVenVo1d/cosmic.git
+    git clone https://github.com/camarman/cosmic.git
 
 or downloading as ZIP.
 
